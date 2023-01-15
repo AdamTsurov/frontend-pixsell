@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/frontend-pixsell/static/css/main.51ea41e0.css",
+    "main.js": "/frontend-pixsell/static/js/main.a6922371.js",
+    "static/media/output-onlinegiftools.gif": "/frontend-pixsell/static/media/output-onlinegiftools.ebd761e502b429f10896.gif",
+    "static/media/game1.png": "/frontend-pixsell/static/media/game1.021bb012dd87ed41ac81.png",
+    "static/media/game2.png": "/frontend-pixsell/static/media/game2.3062a369747c3e25e675.png",
+    "static/media/game3.png": "/frontend-pixsell/static/media/game3.f37d248752619b43f601.png",
+    "static/media/pixel.png": "/frontend-pixsell/static/media/pixel.0cdf310951ee36f607f8.png",
+    "static/media/Rectangle 4 (3).png": "/frontend-pixsell/static/media/Rectangle 4 (3).3ab9a34b9e92c001e32b.png",
+    "static/media/Rectangle 4 (2).png": "/frontend-pixsell/static/media/Rectangle 4 (2).7cf538e8bce0f60fc51b.png",
+    "static/media/Rectangle 4.png": "/frontend-pixsell/static/media/Rectangle 4.a3ed227177b4b330b446.png",
+    "static/media/Rectangle 4 (1).png": "/frontend-pixsell/static/media/Rectangle 4 (1).840ddeb2299c8dff0491.png",
+    "static/media/Frame4.svg": "/frontend-pixsell/static/media/Frame4.1441f312ec1ac2880fb1974b03147db2.svg",
+    "static/media/Frame3.svg": "/frontend-pixsell/static/media/Frame3.5fad64d0ff03fbe6ed42d27a02f367e5.svg",
+    "static/media/Snapchat.svg": "/frontend-pixsell/static/media/Snapchat.d5ded12fe6b12ccc93a71bad2ef11b2e.svg",
+    "static/media/Frame.svg": "/frontend-pixsell/static/media/Frame.4a3d305a297b472b10d751f6b6db0fcb.svg",
+    "static/media/Frame2.svg": "/frontend-pixsell/static/media/Frame2.ffade0f883dddb8a1a9246cf2efbd5ad.svg",
+    "static/media/in.svg": "/frontend-pixsell/static/media/in.94768ff888075bf1800a1562b837831e.svg",
+    "static/media/Behance.svg": "/frontend-pixsell/static/media/Behance.5d85e65fb38669952dffcba669891e96.svg",
+    "static/media/facebook.svg": "/frontend-pixsell/static/media/facebook.2ab3d3ab0ec4a2ec5c06fd1f6c723279.svg",
+    "static/media/Plogo.svg": "/frontend-pixsell/static/media/Plogo.3e774428c0321e14cbbccbd40fc0ad92.svg",
+    "static/media/crugLogo.svg": "/frontend-pixsell/static/media/crugLogo.102f884d9ca597354b07c02ce124350d.svg",
+    "static/media/Basket.svg": "/frontend-pixsell/static/media/Basket.0cb8637deaa485796b6eb31c6ef2c84c.svg",
+    "static/media/Arrow.svg": "/frontend-pixsell/static/media/Arrow.acb98e06f9a8770faa9e0b1d71b3eafd.svg",
+    "static/media/miniArrow2.svg": "/frontend-pixsell/static/media/miniArrow2.7e149a163b654e5e6cc2026374185763.svg",
+    "index.html": "/frontend-pixsell/index.html",
+    "static/media/Mask.svg": "/frontend-pixsell/static/media/Mask.6017b917b4b84c76d06b8a4e334a5b2c.svg",
+    "static/media/Arrow2.svg": "/frontend-pixsell/static/media/Arrow2.538af758ff839a3db1ca6f345ebbf551.svg",
+    "static/media/Arrow 3.svg": "/frontend-pixsell/static/media/Arrow 3.5f71fdc39b9b3ee8149660a5b6198200.svg",
+    "main.51ea41e0.css.map": "/frontend-pixsell/static/css/main.51ea41e0.css.map",
+    "main.a6922371.js.map": "/frontend-pixsell/static/js/main.a6922371.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51ea41e0.css",
+    "static/js/main.a6922371.js"
+  ]
+}
