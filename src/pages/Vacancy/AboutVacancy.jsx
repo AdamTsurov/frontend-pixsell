@@ -8,62 +8,55 @@ import AcceptedWindow from "./AcceptedWindow";
 import { postResponse } from "../../reducers/Slice/responseSlice";
 
 const AboutVacancy = () => {
-  const [acceptedWindow, setAcceptedWindow] = useState(false);
-  const [privacyPolicy, setPrivacyPolicy] = useState(false);
-
-  const [jobApplicationForm, setJobApplicationForm] = useState({
-    fullName: "",
-    email: "",
-    phoneNumber: "",
-    additionalComment: "",
-  });
-
   const dispatch = useDispatch();
-
   const { id } = useParams();
-
   const vacancy = useSelector((state) => state.vacancySlice.vacancy).find(
     (item) => item._id === id
-  );
+    );
+    useEffect(() => {
+      dispatch(fetchVacancy());
+    }, [dispatch]);
+    
+    const [text, setText] = useState("");
+    const handleSetText = (e) => {
+      setText(e.target.value);
+    };
+  const [text1, setText1] = useState("");
+  const handleSetText1 = (e) => {
+    setText1(e.target.value);
+  };
 
-  useEffect(() => {
-    dispatch(fetchVacancy());
-  }, [dispatch]);
+  const [text2, setText2] = useState("");
+  const handleSetText2 = (e) => {
+    setText2(e.target.value);
+  };
 
-  const hundleJobFullName = (e) => {
-    setJobApplicationForm({ ...jobApplicationForm, fullName: e.target.value });
+  const [text3, setText3] = useState("");
+  const handleSetText3 = (e) => {
+    setText3(e.target.value);
   };
-  const hundleJobEmail = (e) => {
-    setJobApplicationForm({ ...jobApplicationForm, email: e.target.value });
-  };
-  const hundleJobPhoneNumber = (e) => {
-    setJobApplicationForm({
-      ...jobApplicationForm,
-      phoneNumber: e.target.value,
-    });
-  };
-  const hundleJobAdditionalComment = (e) => {
-    setJobApplicationForm({
-      ...jobApplicationForm,
-      additionalComment: e.target.value,
-    });
-  };
+
+  // useEffect(() => {
+  //   dispatch(postResponse());
+  // }, [dispatch]);
 
   const handleChangeButton = (e) => {
     e.preventDefault();
-    dispatch(postResponse({ ...jobApplicationForm }));
-    setJobApplicationForm({
-      fullName: "",
-      email: "",
-      phoneNumber: "",
-      additionalComment: "",
-    });
+    dispatch(postResponse({text, text1, text2, text3}));
+    console.log(text, text1, text2, text3);
+    setText("");
+    setText1("");
+    setText2("");
+    setText3("");
   };
 
+
+  const [privacyPolicy, setPrivacyPolicy] = useState(false);
   const handlePrivacyPolicy = () => {
     setPrivacyPolicy(!privacyPolicy);
   };
 
+  const [acceptedWindow, setAcceptedWindow] = useState(false);
   const handleClickWindow = () => {
     setAcceptedWindow(!acceptedWindow);
   };
@@ -74,12 +67,12 @@ const AboutVacancy = () => {
   return (
     <div className={style.mainDiv}>
       <div>
-        {acceptedWindow && (
+        {acceptedWindow ? (
           <AcceptedWindow
             acceptedWindow={acceptedWindow}
             setAcceptedWindow={setAcceptedWindow}
           />
-        )}
+        ) : null}
       </div>
 
       <div className={style.blockDescription}>
@@ -141,17 +134,17 @@ const AboutVacancy = () => {
             <div className={style.blockInp1}>
               <div className={style.inp1}>
                 <input
-                  value={jobApplicationForm.fullName}
+                  value={text}
                   type="text"
-                  onChange={hundleJobFullName}
+                  onChange={handleSetText}
                   placeholder="ФИО"
                 />
               </div>
 
               <div className={style.inp1}>
                 <input
-                  value={jobApplicationForm.email}
-                  onChange={hundleJobEmail}
+                  value={text1}
+                  onChange={handleSetText1}
                   type="email"
                   placeholder="Электронная почта"
                 />
@@ -159,9 +152,9 @@ const AboutVacancy = () => {
 
               <div className={style.inp1}>
                 <input
-                  value={jobApplicationForm.phoneNumber}
+                  value={text2}
                   type="text"
-                  onChange={hundleJobPhoneNumber}
+                  onChange={handleSetText2}
                   placeholder="Телефон"
                 />
               </div>
@@ -177,7 +170,7 @@ const AboutVacancy = () => {
                 <label className={style.inpScrepka} for="file">
                   <i class="fa fa-paperclip"></i>
                 </label>
-                <input placeholder="Прикрепить резюме" id="file" name="file" type="file" multiple hidden />
+                <input id="file" name="file" type="file" multiple hidden />
               </div>
 
               <div className={style.inp22}>
@@ -194,9 +187,9 @@ const AboutVacancy = () => {
 
               <div className={style.inp2}>
                 <input
-                  value={jobApplicationForm.additionalComment}
+                  value={text3}
                   type="text"
-                  onChange={hundleJobAdditionalComment}
+                  onChange={handleSetText3}
                   placeholder="Дополнительный комментарий"
                 />
               </div>
@@ -205,10 +198,10 @@ const AboutVacancy = () => {
             <div className={style.lastDiv}>
               <button
                 className={style.btnSend}
-                disabled={!privacyPolicy || !jobApplicationForm.email || !jobApplicationForm.fullName || !jobApplicationForm.phoneNumber }
+                disabled={!privacyPolicy}
                 onClick={() => handleClickWindow()}
               >
-                ОТПРАВИТЬ
+                <div className={style.sendText}>ОТПРАВИТЬ</div>
                 <svg
                   className={style.svg}
                   width="95"

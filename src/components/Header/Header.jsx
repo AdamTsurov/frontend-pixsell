@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import style from "./Header.module.scss";
+import toyStream from "./photos/toyStream.png";
 import { Link } from "react-router-dom";
 import IronMan from "./photos/output-onlinegiftools.gif";
 import { ReactComponent as Basket } from "./files/Basket.svg";
@@ -28,7 +29,13 @@ const Header = ({
     <div className={style.header}>
       <div>
         <div className={style.toyStream}>
-          
+          <Link to="/">
+            <img
+              className={style.imgToyStream}
+              src={toyStream}
+              alt="фото header"
+            />
+          </Link>
         </div>
       </div>
       <div className={style.textMenu}>
