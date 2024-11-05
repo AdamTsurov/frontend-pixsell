@@ -23,7 +23,7 @@ export const ourTeamsPeopleData = [
   {
     photo: photo3,
     lastName: "Цуров",
-    firstName: "Адольф",
+    firstName: "Ади",
     developerDescription: "Усач",
     quote: "Цитата:",
     quoteText: "В смысле?)",
